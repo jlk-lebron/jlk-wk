@@ -1,7 +1,7 @@
 module.exports = {
   title: "小王的博客",
   description: "小王的博客",
-  base: "/jlk-wk/",
+  base: "/",
   theme: "vdoing",
   head: [["link", { rel: "icon", href: "logo.png" }]],
   themeConfig: {
