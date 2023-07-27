@@ -55,7 +55,7 @@ module.exports = {
     sidebar: [
       {
         title: "Vue",
-        link: "/vue/",
+        link: "/",
         collapsable: true, // 不折叠
         children: [
           { title: "初体验", path: "/vue/Vue3初体验.md" },
