@@ -89,7 +89,7 @@ module.exports = {
         title: "JavaScript",
         link: "/",
         collapsable: true, // 不折叠
-        children: [{ title: "数组去重的方法", path: "/JavaScript/数组去重的方法.md" }],
+        children: [{ title: "数组去重的方法", path: "/Javascript/数组去重的方法.md" }],
       },
       {
         title: "小程序",
