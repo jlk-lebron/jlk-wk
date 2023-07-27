@@ -16,6 +16,35 @@ module.exports = {
         ],
       },
     ],
+    blogger: {
+      avatar:
+        "https://cdn.jsdelivr.net/gh/xugaoyi/image_store/blog/20200103123203.jpg",
+      name: "Evan Xu",
+      slogan: "前端界的小学生",
+    },
+    social: {
+      // iconfontCssFile: '//at.alicdn.com/t/font_1678482_u4nrnp8xp6g.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自己添加
+      icons: [
+        {
+          iconClass: "icon-youjian",
+          title: "发邮件",
+          link: "mailto:16631085276@163.com",
+        },
+        {
+          iconClass: "icon-github",
+          title: "GitHub",
+          link: "https://github.com/jlk-lebron",
+        }
+      ],
+    },
+
+    // 页脚信息
+    footer: {
+      createYear: 2022, // 博客创建年份
+      copyrightInfo:
+        'Lebron Jia  | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签
+    },
+
     subSidebar: "auto",
     locales: {
       "/": {
