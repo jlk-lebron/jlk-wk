@@ -86,6 +86,12 @@ module.exports = {
         children: [{ title: "前端性能优化", path: "/前端性能优化/优化.md" }],
       },
       {
+        title: "JavaScript",
+        link: "/",
+        collapsable: true, // 不折叠
+        children: [{ title: "数组去重的方法", path: "/JavaScript/数组去重的方法.md" }],
+      },
+      {
         title: "小程序",
         link: "/",
         collapsable: true, // 不折叠
