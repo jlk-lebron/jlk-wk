@@ -18,7 +18,7 @@ module.exports = {
     ],
     blogger: {
       avatar:
-        "https://github.com/account",
+        "https://cdn.staticaly.com/gh/jlk-lebron/blog-img@main/PicGo/zms.jpg",
       name: "Lebron Jia",
       slogan: "前端小学生",
     },
