@@ -18,9 +18,9 @@ module.exports = {
     ],
     blogger: {
       avatar:
-        "https://cdn.jsdelivr.net/gh/xugaoyi/image_store/blog/20200103123203.jpg",
-      name: "Evan Xu",
-      slogan: "前端界的小学生",
+        "https://github.com/account",
+      name: "Lebron Jia",
+      slogan: "前端小学生",
     },
     social: {
       // iconfontCssFile: '//at.alicdn.com/t/font_1678482_u4nrnp8xp6g.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自己添加
@@ -55,7 +55,7 @@ module.exports = {
     sidebar: [
       {
         title: "Vue",
-        link: "/",
+        link: "/vue/",
         collapsable: true, // 不折叠
         children: [
           { title: "初体验", path: "/vue/Vue3初体验.md" },
