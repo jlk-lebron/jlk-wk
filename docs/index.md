@@ -15,11 +15,11 @@ features: # 可选的
   - title: 页面
     details: html(5)/css(3)，前端页面相关技术
     link: /pages/5ba336/
-    imgUrl: ui.png
+    imgUrl: https://cdn.staticaly.com/gh/jlk-lebron/blog-img@main/PicGo/ui.png
   - title: 技术
     details: 技术文档、教程、技巧、总结等文章
     link: /pages/5ba336/
-    imgUrl: other.png
+    imgUrl: https://cdn.staticaly.com/gh/jlk-lebron/blog-img@main/PicGo/other.png
 
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 # postList: detailed
