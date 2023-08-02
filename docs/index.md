@@ -11,7 +11,7 @@ features: # 可选的
   - title: 前端
     details: JavaScript、ES6、Vue框架等前端技术
     link:  /pages/5ba336/ # 可选
-    imgUrl: web.png # 可选
+    imgUrl: https://cdn.staticaly.com/gh/jlk-lebron/blog-img@main/PicGo/web.png # 可选
   - title: 页面
     details: html(5)/css(3)，前端页面相关技术
     link: /pages/5ba336/
