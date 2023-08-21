@@ -34,7 +34,7 @@ module.exports = {
           iconClass: "icon-github",
           title: "GitHub",
           link: "https://github.com/jlk-lebron",
-        }
+        },
       ],
     },
 
@@ -80,6 +80,22 @@ module.exports = {
         ],
       },
       {
+        title: "ES6",
+        link: "/",
+        collapsable: true, // 不折叠
+        children: [
+          { title: "函数进阶", path: "/ES6/函数进阶.md" },
+          { title: "BOM操作", path: "/ES6/BOM操作.md" },
+          { title: "DOM操作", path: "/ES6/DOM操作.md" },
+          { title: "JS事件高级篇", path: "/ES6/JS事件高级篇.md" },
+          { title: "ES6", path: "/ES6/ES6.md" },
+          {
+            title: "元素的+offset+client+scroll属性",
+            path: "/ES6/元素的+offset+client+scroll属性.md",
+          },
+        ],
+      },
+      {
         title: "前端性能优化",
         link: "/",
         collapsable: true, // 不折叠
@@ -89,7 +105,31 @@ module.exports = {
         title: "JavaScript",
         link: "/",
         collapsable: true, // 不折叠
-        children: [{ title: "数组去重的方法", path: "/Javascript/数组去重的方法.md" }],
+        children: [
+          { title: "数组去重的方法", path: "/Javascript/数组去重的方法.md" },
+        ],
+      },
+      {
+        title: "TypeScript",
+        link: "/",
+        collapsable: true, // 不折叠
+        children: [
+          { title: "TypeScript介绍", path: "/TypeScript/01-TypeScript介绍.md" },
+          { title: "TypeScript基础", path: "/TypeScript/02-TypeScript基础.md" },
+          { title: "TypeScript拓展阅读", path: "/TypeScript/03-TypeScript拓展阅读.md" },
+        ],
+      },
+      {
+        title: "Node",
+        link: "/",
+        collapsable: true, // 不折叠
+        children: [
+          { title: "包管理工具", path: "/Node/包管理工具.md" },
+          { title: "模块化", path: "/Node/模块化.md" },
+          { title: "git版本控制工具", path: "/Node/git版本控制工具.md" },
+          { title: "HTTP", path: "/Node/HTTP.md" },
+          { title: "NodeJS", path: "/Node/NodeJS.md" },
+        ],
       },
       {
         title: "小程序",
