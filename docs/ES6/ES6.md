@@ -1,6 +1,6 @@
 ---
 title: ES6
-date: 2023-08-19 16:55:45
+date: 2023-08-20 16:55:45
 permalink: /pages/1876a3/
 categories:
   - ES6
@@ -126,14 +126,6 @@ ECMA ( European Computer Manufacturers Association ) 中文名为欧洲计算机
 
 TC39会议内容： [https://github.com/tc39/notes/tree/211aa3f9e0fac861bba427776a9ecb8663fdf280/meetings](https://github.com/tc39/notes/tree/211aa3f9e0fac861bba427776a9ecb8663fdf280/meetings)
 
-## 为什么要学习 ES6
-
-- ES6 的版本变动内容较多，具有里程碑意义。
-
-- ES6 加入许多新的语法特性，编程实现更简单、高效
-
-- ES6 是前端发展趋势，就业必备技能
-
 ## ES6 兼容性（97%）
 
 [http://kangax.github.io/compat-table/es6/](http://kangax.github.io/compat-table/es6/) 可查看兼容性
@@ -185,13 +177,13 @@ let s1 = Symbol();
 console.log(s1, typeof s1);
 
 //添加标识的 Symbol,方便代码阅读和后期调试
-let s2 = Symbol('尚硅谷');
-let s2_2 = Symbol('尚硅谷');
+let s2 = Symbol('小米');
+let s2_2 = Symbol('小米');
 console.log(s2 === s2_2);//false
 
 //使用 Symbol.for() 创建共享的Symbol,有全局缓存特点。如果已经定义过，就会返回原来的值。
-let s3 = Symbol.for('尚硅谷');
-let s3_2 = Symbol.for('尚硅谷');
+let s3 = Symbol.for('小米');
+let s3_2 = Symbol.for('小米');
 console.log(s3 === s3_2); // true
 
 ```
@@ -958,7 +950,7 @@ Object.defineProperty(person,'age',{
 
 > 通过defineProperty设置symbol属性同样也是无法被枚举的，只能通过Object.getOwnPropertySymbols去获取
 
-# 迭代器iterator[理解即可]
+# 迭代器iterator
 
 > 迭代器（Iterator）是一种接口，为各种不同的数据结构提供统一的访问机制。任何数据结构只要实现了 Iterator 接口，就可以通过for-of实现遍历操作。
 
@@ -1047,7 +1039,7 @@ console.log(iterator.next()) // {value: undefined, done: true}
     }
     ```
 
-## 自定义遍历数据【了解】
+## 自定义遍历数据
 
 **迭代器应用场景：需要自定义遍历数据的时候，就要想到迭代器**
 
@@ -1457,7 +1449,7 @@ console.log(Math.trunc('123.45')) // 123
 console.log(Number('123.45')) // 123.45
 ```
 
-# 扩展的数组函数[重要]
+# 扩展的数组函数
 
 常用的有： forEach、map、filter、every, some, find, findIndex，reduce。
 
