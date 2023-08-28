@@ -1,11 +1,11 @@
 ---
 title: 元素的+offset+client+scroll属性
-date: 2023-08-19 16:55:45
+date: 2023-07-19 16:55:45
 permalink: /pages/1fc096/
 categories:
   - ES6
 tags:
-  - 
+  -
 ---
 # 元素offset属性
 
@@ -14,15 +14,14 @@ tags:
 作用：
 
 1. 获取元素自身宽高
-
 2. 获取距离父容器的偏移量
 
-|offset相关属性|作用|
-|-|-|
-|element.offsetTop|**HTMLElement.offsetTop** 为只读属性，它返回当前元素相对于其 最近的定位的祖先 元素的顶部内边距的距离|
-|element.offsetLeft|**HTMLElement.offsetLeft** 为只读属性，它返回当前元素相对于其 最近的定位的祖先元素的左内边距的距离|
-|element.offsetWidth|返回自身宽度大小，`width+padding*2+border*2`， 含滚动条|
-|element.offsetHeight|返回自身高度大小，`height+padding*2+border*2`，含滚动条|
+| offset相关属性       | 作用                                                                                                          |
+| -------------------- | ------------------------------------------------------------------------------------------------------------- |
+| element.offsetTop    | **HTMLElement.offsetTop** 为只读属性，它返回当前元素相对于其 最近的定位的祖先 元素的顶部内边距的距离 |
+| element.offsetLeft   | **HTMLElement.offsetLeft** 为只读属性，它返回当前元素相对于其 最近的定位的祖先元素的左内边距的距离    |
+| element.offsetWidth  | 返回自身宽度大小，`width+padding*2+border*2`， 含滚动条                                                     |
+| element.offsetHeight | 返回自身高度大小，`height+padding*2+border*2`，含滚动条                                                     |
 
 注意:返回的数值都不带单位，且上面属性都是只读属性。
 
@@ -70,15 +69,14 @@ client作用：获取元素可视区的相关信息。
 作用：
 
 1. 获取元素宽高
-
 2. 获取元素的边框大小
 
-|client相关属性|作用|
-|-|-|
-|element.clientTop|返回元素上边框的大小|
-|element.clientLeft|返回元素左边框的大小|
-|element.clientWidth|返回自身宽度大小，`width+padding*2`，不含滚动条|
-|element.clientHeight|返回自身高度大小，`height+padding*2`，不含滚动条|
+| client相关属性       | 作用                                               |
+| -------------------- | -------------------------------------------------- |
+| element.clientTop    | 返回元素上边框的大小                               |
+| element.clientLeft   | 返回元素左边框的大小                               |
+| element.clientWidth  | 返回自身宽度大小，`width+padding*2`，不含滚动条  |
+| element.clientHeight | 返回自身高度大小，`height+padding*2`，不含滚动条 |
 
 > 注意和offsetWidth的区别，clientWidth是不含边框的。
 
@@ -137,15 +135,14 @@ scroll：翻译过来就是滚动的意思
 作用：
 
 - 获取元素的大小（含溢出）
-
 - 获取元素卷上去的距离
 
-|scroll相关属性|作用|
-|-|-|
-|element.scrollTop|获取被卷去的上侧距离，返回的数值不带单位|
-|element.scrollLeft|获取被卷去的左侧距离，返回的数值不带单位|
-|element.scrollWidth|返回自身宽度（包含width+padding+溢出内容）,不含边框，返回值不带单位|
-|element.scrollHeight|返回自身高度（包含height+padding+溢出内容）,不含边框，返回值不带单位|
+| scroll相关属性       | 作用                                                                 |
+| -------------------- | -------------------------------------------------------------------- |
+| element.scrollTop    | 获取被卷去的上侧距离，返回的数值不带单位                             |
+| element.scrollLeft   | 获取被卷去的左侧距离，返回的数值不带单位                             |
+| element.scrollWidth  | 返回自身宽度（包含width+padding+溢出内容）,不含边框，返回值不带单位  |
+| element.scrollHeight | 返回自身高度（包含height+padding+溢出内容）,不含边框，返回值不带单位 |
 
 ![1662991808910](import/892812e8-6e25-4f37-ac4a-2475496e82bc/assets/1662991808910.png)
 
@@ -195,7 +192,6 @@ scroll：翻译过来就是滚动的意思
 **获取网页卷上去的高度：**
 
 1. 使用document.documentElement.scrollTop 或 使用document.body.scrollTop。
-
 2. window新属性， window.pageYOffset 和 window.pageXOffset,    window.scrollY和window.scrollX， IE9和其他w3c标准浏览器开始支持
 
 ```JavaScript
@@ -306,7 +302,6 @@ html {
 ## 实现思路
 
 - 把图片的真实地址记录在图片的非src属性中，如data-src属性中。
-
 - 等图片进入可视区内，则把img的data-src的属性值赋值给src属性，即可加载图片。
 
 页面布局结构
@@ -425,4 +420,3 @@ html {
 ## 结合轮播图使用
 
 # 案例-放大镜效果
-

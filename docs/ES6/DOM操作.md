@@ -1,14 +1,13 @@
 ---
 typora-copy-images-to: assets
 title: DOM操作
-date: 2023-08-19 16:55:45
+date: 2023-07-24 16:55:45
 permalink: /pages/f25ced/
 categories: 
   - ES6
 tags: 
-  - 
+  -
 ---
-
 # DOM操作
 
 ## 回顾js组成部分
@@ -16,16 +15,13 @@ tags:
 两部分：
 
 - ECMAScript
-
 - web Apis (DOM、BOM)
-
 - **ECMAScript**: 规定js语言的实现标准和规范。
-
 - **DOM** （ Document Object Model）：文档对象模型。它提供了一套操作页面元素的API。作用：便于操作页面节点。如操作标签的颜色，背景，添加元素、删除元素等等。
-
 - **BOM**（Browser Object Model  ）：浏览器对象模型。它提供了一套操作浏览器功能的API方法，可以操作浏览器窗口。比如：控制浏览器前进、后退、刷新、获取屏幕分辨率等
 
-    > 简单理解：API（Application Programming Interface，应用程序接口）就是程序预留给程序员提供的一种工具，以便能够轻松的实现某些功能。如 弹窗 alert就是一个API。
+  > 简单理解：API（Application Programming Interface，应用程序接口）就是程序预留给程序员提供的一种工具，以便能够轻松的实现某些功能。如 弹窗 alert就是一个API。
+  >
 
 我们先讲解DOM相关知识。
 
@@ -34,9 +30,7 @@ tags:
 DOM每个字母的含义：
 
 - （Document）文档：表示的就是整个HTML网页文档.
-
 - （Object）对象：表示将网页中的每个节点（如div）都视为了一个节点对象
-
 - （Model）模型：描述了文档中每个节点之间的关系，这样便于我们操作整个文档。
 
 一个HTML网页就是一个文档，其中的各种节点组成了**DOM树（文档树）**。 document就是文档对象
@@ -44,18 +38,13 @@ DOM每个字母的含义：
 ## 节点Node
 
 - 节点（Node）： 是构成HTML文档最基本的单元。
-
 - 节点分类:
 
-    - 文档节点：整个HTML文档，也可称document节点
-
-    - 元素节点：HTML文档中的某个HTML标签，如a节点,div节点
-
-    - 属性节点：元素的属性，如 a标签的href属性
-
-    - 文本节点：标签中文本内容。如 h1标签中的内容
-
-    - 注释节点：我们所写的注释
+  - 文档节点：整个HTML文档，也可称document节点
+  - 元素节点：HTML文档中的某个HTML标签，如a节点,div节点
+  - 属性节点：元素的属性，如 a标签的href属性
+  - 文本节点：标签中文本内容。如 h1标签中的内容
+  - 注释节点：我们所写的注释
 
 ```HTML
 // div元素节点、id属性节点、content文本节点
@@ -65,13 +54,13 @@ DOM每个字母的含义：
 
 ## document文档对象属性
 
-|**属性名**|**功能**|
-|-|-|
-|**document.head**|获取文档中的head标签|
-|**document.body**|获取文档中的body标签对象（DOM节点、标签对象、元素）|
-|**document.documentElement**|获取文档中根元素 html标签|
-|**document.images**|获取文档中所有的图片元素 返回是一个集合|
-|**document.title**|获取网页标题title|
+| **属性名**                   | **功能**                                      |
+| ---------------------------------- | --------------------------------------------------- |
+| **document.head**            | 获取文档中的head标签                                |
+| **document.body**            | 获取文档中的body标签对象（DOM节点、标签对象、元素） |
+| **document.documentElement** | 获取文档中根元素 html标签                           |
+| **document.images**          | 获取文档中所有的图片元素 返回是一个集合             |
+| **document.title**           | 获取网页标题title                                   |
 
 > 注：凡是在JS中遇到“集合”两字  它就是一个伪数组 ，它的访问方式与数组一样，可通过下标来访问。也可以for循环遍历，也可以通过length长度来获取匹配的元素个数
 
@@ -97,22 +86,17 @@ document.title = '看世界杯'
 以下方法都是在文档中**找元素节点**。
 
 - **document.getElementById("ID名")** : 通过id的属性值来获取节点对象。没找到,则返回null
-
 - **document.getElementsByTagName("标签")**： 通过标签名来获取节点对象
-
 - **祖先节点.getElementsByTagName("标签名")** :  也可通过祖先节点来获取其下面的指定标签名节点。
-
 - **document.getElementsByClassName("类名")** : 通过类名来获取节点对象
-
 - **document.getElementsByName('name名')** ：通过标签的name属性值来获取元素。
-
 - **document. querySelector(selector)** ：返回选择器所匹配的第一个节点对象。 
-
 - **document. querySelectorAll(selector)** ： 返回选择器所匹配的所有元素。
 
-    > 参数selectors:相当于css选择器
+  > 参数selectors:相当于css选择器
+  >
 
-上面的方法除了`document.getElementById("ID")`和`document. querySelector(selector)`都是返回一个指定的节点对象，其他方法都是返回一个节点集合（伪数组）。 只要带`Elements`的都是返回集合。
+上面的方法除了 `document.getElementById("ID")`和 `document. querySelector(selector)`都是返回一个指定的节点对象，其他方法都是返回一个节点集合（伪数组）。 只要带 `Elements`的都是返回集合。
 
 示例代码：
 
@@ -227,7 +211,6 @@ document.title = '看世界杯'
 注意：querySelector(css选择器)和querySelectorAll(css选择器)的区别：
 
 - querySelector：仅返回匹配到的第一个节点对象
-
 - querySelectorAll： 返回匹配到的所有节点对象
 
 > 如果返回的是一个元素集合(HTMLCollection)还是一个节点列表（nodeList）,要操作其中的元素节点，必须通过下标取出来在操作
@@ -238,15 +221,12 @@ document.title = '看世界杯'
 
 - 常用节点分为四类:
 
-    - 元素节点：HTML文档中的某个HTML标签。平时使用最多的
+  - 元素节点：HTML文档中的某个HTML标签。平时使用最多的
+  - 属性节点：元素的属性
+  - 文本节点：HTML标签中的文本内容
+  - 注释节点：我们所写的注释
 
-    - 属性节点：元素的属性
-
-    - 文本节点：HTML标签中的文本内容
-
-    - 注释节点：我们所写的注释
-
-通过节点对象的`node.nodeType`属性可以获取节点类型，创建节点类型如下：
+通过节点对象的 `node.nodeType`属性可以获取节点类型，创建节点类型如下：
 
 ```JavaScript
 node.nodeType // 1 元素节点  (element Node)
@@ -274,18 +254,17 @@ node.nodeType // 9 文档节点 （document Node）
         console.log(boxEle.childNodes); // 获取所有的子节点
         console.log(boxEle.children);// 获取所有的子元素节点
 
-        
+      
         console.log(boxEle.childNodes[3].nodeType); // 1 节点类型
         console.log(boxEle.childNodes[3].nodeName); // DIV 节点名称
         console.log(boxEle.childNodes[3].localName); // div 节点名称
         console.log(boxEle.childNodes[3].className); // 'a b' 获取类名
-        
+      
     </script>
 </body>
 ```
 
 - childNodes: 获取某个节点下面的所有子节点
-
 - children: 获取某个节点下面的所有子元素节点
 
 ## 节点的内容操作
@@ -294,17 +273,13 @@ node.nodeType // 9 文档节点 （document Node）
 
 - 双标签：如a、h1-h6、div、li、span、button、p ，
 
-    - innerHTML:操作标签内部内容（可解析标签）
-
-    - innerText: 操作标签内部纯文本内容（不解析标签）
-
-    - outerHTML: 获取标签整个内容（含标签）
-
-    - outetText：获取标签整个纯文本内容（不含标签）
-
+  - innerHTML:操作标签内部内容（可解析标签）
+  - innerText: 操作标签内部纯文本内容（不解析标签）
+  - outerHTML: 获取标签整个内容（含标签）
+  - outetText：获取标签整个纯文本内容（不含标签）
 - 表单元素：如：input、textarea、radio、checkbox、select 即单标签:
 
-    - value: 用户表单中输入的值
+  - value: 用户表单中输入的值
 
 双标签操作内容：
 
@@ -349,9 +324,7 @@ var content = node.value
 ### 什么是事件
 
 - 事件就是文档或浏览器窗口中发生的一些特定的交互瞬间。
-
 - 如：鼠标单击、鼠标悬浮、键盘按下抬起等事件。
-
 - JavaScript与HTML之间的交互就是通过事件实现的。
 
 ### 事件的绑定方式
@@ -359,15 +332,12 @@ var content = node.value
 事件的绑定常用的两种方式：
 
 - 行内绑定
-
 - 动态绑定(js)【用的多】
 
 **绑定事件三要素**
 
 - 确定事件源 （给哪个节点对象绑定）
-
 - 事件类型： 如：onclick单击事件，onmouseover鼠标悬浮事件
-
 - 事件的处理函数：处理事件的相关逻辑
 
 1. **行内绑定**
@@ -391,7 +361,7 @@ var content = node.value
 
 格式：
 
-```Plain Text
+```Plain
 DOM对象.事件名 = 事件处理程序
 ```
 
@@ -411,13 +381,13 @@ DOM对象.事件名 = 事件处理程序
 
 - 页面事件：
 
-    - onload:页面元素结构和资源（图片、css、js）加载完毕后执行，一般给window绑定。
+  - onload:页面元素结构和资源（图片、css、js）加载完毕后执行，一般给window绑定。
+  - DOMContentLoaded:仅等待页面结构加载完毕后执行，不需等待完毕资源，所以速度快于onload。
 
-    - DOMContentLoaded:仅等待页面结构加载完毕后执行，不需等待完毕资源，所以速度快于onload。
+  > 大部分我们只需要等待页面结构加载完毕之后就可以做一些初始化操作。所以DOMContentLoaded使用较多
+  >
 
-    > 大部分我们只需要等待页面结构加载完毕之后就可以做一些初始化操作。所以DOMContentLoaded使用较多
-
-    - onresize: 改变浏览器窗口大小触发
+  - onresize: 改变浏览器窗口大小触发
 
 ```HTML
 <head>
@@ -429,20 +399,20 @@ DOM对象.事件名 = 事件处理程序
                 alert('你好')
             }
         }
-        
+      
         // 页面元素内容（无需等待css、js、images）全部加载完毕后执行事件
         document.addEventListener('DOMContentLoaded',function(){
           console.log('DOMContentLoaded')
         }) 
-        
-        
+      
+      
         //   页面尺寸改变事件
       window.onresize = function () {
         console.log('尺寸改变了')
         console.log('浏览器可视宽:', window.innerWidth)
         console.log('浏览器可视高:', window.innerHeight)
       }
-      
+    
     	// 或有名函数
         function onresizeHandle() {
             // 获取网页可视宽高
@@ -450,7 +420,7 @@ DOM对象.事件名 = 事件处理程序
             console.log('可视高：', window.innerHeight)
         }
         window.onresize = onresizeHandle // onresizeHandle为函数名，不能加小括号
-        
+      
     </script>
    
 </head>
@@ -458,61 +428,58 @@ DOM对象.事件名 = 事件处理程序
 
 - 焦点（光标）事件：给input 输入框绑定
 
-    - onblur：失去焦点
+  - onblur：失去焦点
+  - onfocus：获取焦点
 
-    - onfocus：获取焦点
+  ```HTML
+  <body>
+      <!-- autocomplete：关闭缓存提示 -->
+      <!-- placeholder：提示占位符 -->
+      <input type="text" id="search" placeholder="输入关键字" autocomplete="off">
+      <script>
+          var searchEle = document.getElementById('search');
 
-    ```HTML
-    <body>
-        <!-- autocomplete：关闭缓存提示 -->
-        <!-- placeholder：提示占位符 -->
-        <input type="text" id="search" placeholder="输入关键字" autocomplete="off">
-        <script>
-            var searchEle = document.getElementById('search');
-    
-            // 获取焦点事件
-            searchEle.onfocus = function(){
-                console.log('我获取焦点了')
-            }
-            // 失去焦点事件(必须先获取焦点)
-            searchEle.onblur = function(){
-                console.log('我失去焦点')
-            }
-            
-             // 自动获取焦点
-          	searchEle.focus()
-    
-        </script>
-    </body>
-    ```
+          // 获取焦点事件
+          searchEle.onfocus = function(){
+              console.log('我获取焦点了')
+          }
+          // 失去焦点事件(必须先获取焦点)
+          searchEle.onblur = function(){
+              console.log('我失去焦点')
+          }
 
+           // 自动获取焦点
+        	searchEle.focus()
+
+      </script>
+  </body>
+  ```
 - 单击事件
 
-    - onclick：单击
+  - onclick：单击
+  - ondblclick：双击
 
-    - ondblclick：双击
+  ```HTML
+  <body>
+      <div class="box"></div>
+      <script>
 
-    ```HTML
-    <body>
-        <div class="box"></div>
-        <script>
-            
-            // 通过变量将节点缓存起来，避免查找多次，浪费性能
-            var boxEle = document.getElementsByClassName('box')[0];
-    
-            // 单击事件
-            boxEle.onclick = function(){
-                console.log(this) // 当前调用者boxEle
-                console.log('老铁你好')
-            }
-    
-            // 双击事件
-            boxEle.ondblclick = function(){
-                console.log('爱心赞')
-            }
-        </script>
-    </body>
-    ```
+          // 通过变量将节点缓存起来，避免查找多次，浪费性能
+          var boxEle = document.getElementsByClassName('box')[0];
+
+          // 单击事件
+          boxEle.onclick = function(){
+              console.log(this) // 当前调用者boxEle
+              console.log('老铁你好')
+          }
+
+          // 双击事件
+          boxEle.ondblclick = function(){
+              console.log('爱心赞')
+          }
+      </script>
+  </body>
+  ```
 
 事件的自执行：即让事件默认执行一次。如让单击事件默认执行一次。
 
@@ -524,7 +491,7 @@ DOM对象.事件名 = 事件处理程序
     btnEle.onclick = function(){
         console.log(1)
     }
-    
+  
     // 事件的自执行,后面加小括号（）即可执行
     btnEle.onclick()
 </script>
@@ -534,15 +501,11 @@ DOM对象.事件名 = 事件处理程序
 
 - 鼠标事件：
 
-    - onmouseover:鼠标悬浮时
-
-    - onmouseout:鼠标离开时
-
-    - onmousedown:鼠标按下时
-
-    - onmousemove:鼠标移动时
-
-    - onmouseup:鼠标抬起时
+  - onmouseover:鼠标悬浮时
+  - onmouseout:鼠标离开时
+  - onmousedown:鼠标按下时
+  - onmousemove:鼠标移动时
+  - onmouseup:鼠标抬起时
 
 > onmousedown、onmouseup、onmousemove一般在鼠标拖拽的使用较多
 
@@ -574,12 +537,10 @@ DOM对象.事件名 = 事件处理程序
 
 - 切换事件（给input或select绑定）：
 
-    - onchange：给select下拉框绑定。切换选项时触发。 也可以给文本域input （type=file、text）绑定，一般用于上传文件
-
+  - onchange：给select下拉框绑定。切换选项时触发。 也可以给文本域input （type=file、text）绑定，一般用于上传文件
 - 内容改变事件（给input绑定）
 
-    - oninput：监听input(type=text)框内容改变时触发。
-
+  - oninput：监听input(type=text)框内容改变时触发。
 - select下拉框切换事件
 
 ```HTML
@@ -648,33 +609,28 @@ DOM对象.事件名 = 事件处理程序
 
 - 滚动事件
 
-    - onscroll: 滚动条滚动时触发
+  - onscroll: 滚动条滚动时触发
 
-        ```JavaScript
-        //  给页面绑定滚动事件
-        window.onscroll = function () {
-        	console.log('页面滚动了')
-        }
-        
-        //  给id=box绑定滚动事件
-        document.getElementById('box').onscroll = function () {
-        	console.log('元素滚动了')
-        }
-        ```
+    ```JavaScript
+    //  给页面绑定滚动事件
+    window.onscroll = function () {
+    	console.log('页面滚动了')
+    }
 
+    //  给id=box绑定滚动事件
+    document.getElementById('box').onscroll = function () {
+    	console.log('元素滚动了')
+    }
+    ```
 - 键盘事件（给input绑定）：
 
-    - onkeydown：键盘按下触发（并不需要抬起，若按着不放则一直触发）
-
-    - onkeypress：键盘按下并抬起触发一些功能键键如：shift,ctrl，alt等无法得到识别。
-
-    - onkeyup：（开发使用最多）任何键盘键按下并抬起时触发（任何键盘键都有效）
-
+  - onkeydown：键盘按下触发（并不需要抬起，若按着不放则一直触发）
+  - onkeypress：键盘按下并抬起触发一些功能键键如：shift,ctrl，alt等无法得到识别。
+  - onkeyup：（开发使用最多）任何键盘键按下并抬起时触发（任何键盘键都有效）
 - 表单事件 (给form表单绑定)
 
-    - onsubmit：表单提交时
-
-    - reset：表单重置时(清除用户输入的信息)
+  - onsubmit：表单提交时
+  - reset：表单重置时(清除用户输入的信息)
 
 示例：
 
@@ -744,7 +700,7 @@ DOM对象.事件名 = 事件处理程序
 
 仅操作元素的行内style样式，可通过dom对象的style属性进行操作：
 
-```Plain Text
+```Plain
 <style>
 	#box {
         font-size:30px;
@@ -756,12 +712,12 @@ DOM对象.事件名 = 事件处理程序
 
 示例：
 
-```Plain Text
+```Plain
 element.style.fontSize = '50px'; // 设置字体大小为50px
 element.style.backgroundColor = 'green'; // 设置背景色为绿色，值设为16进制如#00ff00也行
 ```
 
-```Plain Text
+```Plain
 // 让元素显示或隐藏
 element.style.display = 'none' ; // 隐藏
 element.style.display = ''; // 显示 。 赋值为空字符，相当于删除行内样式
@@ -769,7 +725,7 @@ element.style.display = ''; // 显示 。 赋值为空字符，相当于删除�
 
 注意：通过js控制样式，把原来的css样式的写法改成小驼峰法即可.
 
-```Plain Text
+```Plain
 如： 
 font-size => fontSize ,   
 border-width => borderWidth， 
@@ -778,44 +734,43 @@ background-color =>  backgroundColor
 
 - 示例
 
-    ```HTML
-    <!DOCTYPE html>
-    <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <style>
-            #box {
-                width: 200px;
-                height: 200px;
-                background-color: gray;
-                font-size: 25px;
-            }
-        </style>
-    </head>
-    
-    <body>
-        <div id="box" style="font-size:20px">
-            好好学习，天天向上
-        </div>
-        <button id="btn">变吧</button>
-        <script>
-            // 单击按钮，把id=box的元素节点字体大小改为30px,背景色改为red
-            document.getElementById('btn').onclick = function () {
-                var boxEle = document.getElementById('box')
-                console.log(boxEle.style.fontSize) // '20px'
-                boxEle.style.fontSize = '30px'
-                boxEle.style.backgroundColor = 'red'
-            }
-        </script>
-    </body>
-    
-    </html>
-    ```
+  ```HTML
+  <!DOCTYPE html>
+  <html lang="en">
 
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+          #box {
+              width: 200px;
+              height: 200px;
+              background-color: gray;
+              font-size: 25px;
+          }
+      </style>
+  </head>
+
+  <body>
+      <div id="box" style="font-size:20px">
+          好好学习，天天向上
+      </div>
+      <button id="btn">变吧</button>
+      <script>
+          // 单击按钮，把id=box的元素节点字体大小改为30px,背景色改为red
+          document.getElementById('btn').onclick = function () {
+              var boxEle = document.getElementById('box')
+              console.log(boxEle.style.fontSize) // '20px'
+              boxEle.style.fontSize = '30px'
+              boxEle.style.backgroundColor = 'red'
+          }
+      </script>
+  </body>
+
+  </html>
+  ```
 - 元素显示或隐藏
 
 ```HTML
@@ -989,7 +944,7 @@ DOM对象的style属性仅能操作和获取行内样式。如果要获取样式
         var boxEle = document.getElementById('box')
         // 获取元素css样式
         var cssStyle = window.getComputedStyle(boxEle,null)
-       
+     
         console.log(boxEle.style.height); // '' 仅能获取对象的style属性内的值
         console.log(cssStyle.height); // 200px
 
@@ -1007,9 +962,7 @@ DOM对象的style属性仅能操作和获取行内样式。如果要获取样式
 课堂案例：
 
 - 实现表格隔行换色
-
 - 鼠标悬浮离开实现表格隔行换色
-
 - 网页换肤，实现每隔2s自动换色（需要封装随机函数）
 
 ```JavaScript
@@ -1079,7 +1032,7 @@ clearInterval(timer2); // 取消定时器
         var timer; // undefined
         // 开始随机换色
         document.getElementById('btn').onclick = function () {
-          
+        
             // 防止启动多个定时器，保证一个定时器在运行
             if (timer) {
                 console.log('已经在跑了，不要在催了')
@@ -1190,14 +1143,14 @@ dom对象.classList.replace('a','b');
 
             // 类名之间进行切换，有则移除，无则添加
             boxEle.classList.toggle('lmn')
-            
+          
             // boxEle.classList.remove('abc'); // 删除类名abc
             // boxEle.classList.add('xyz'); // 添加类名xyz
 
             // 上面两行可以简化
             boxEle.classList.replace('abc','xyz')  
         }
-       
+     
     </script>
 </body>
 </html>
@@ -1276,9 +1229,7 @@ dom对象.classList.replace('a','b');
 **写DOM操作案例的基本思路：**
 
 1. 先观察网页整体布局的结构，便于写网页结构（html）,在写css样式美化
-
 2. 观察页面的变化效果，把变化效果css样式单独定义在一个class类名中,不建议用style属性一个个改
-
 3. 绑定事件用js去动态的添加和移除类名，或修改结构和属性，从而改变页面效果
 
 ## 节点的属性操作
@@ -1286,12 +1237,11 @@ dom对象.classList.replace('a','b');
 属性分类：
 
 - 自定义属性：用户自己定义的属性。
-
 - 内置属性：标签本身就具有属性。 `a => href`  、 `img=>src`, `id`、`class`、`title`等。
 
 如下示例：
 
-```Plain Text
+```Plain
 <div id="box" title="悬浮我身上会看到我" class="a" a="1" b="2"></div>
 内置属性：id、title、class
 自定义属性：a、b
@@ -1300,15 +1250,12 @@ dom对象.classList.replace('a','b');
 操作内置和自定义属性：
 
 - 设置属性：dom对象.setAttribute(k,v);
-
 - 获取属性：dom对象.getAttribute(k);
-
 - 删除属性：dom对象.removeAttribute(k)
-参数说明：
+  参数说明：
 
-    - k:属性名（可以是自定义属性和内置属性）
-
-    - v:属性值
+  - k:属性名（可以是自定义属性和内置属性）
+  - v:属性值
 
 `dom对象.属性名：`仅能操作内置属性：如下：
 
@@ -1317,7 +1264,7 @@ dom对象.classList.replace('a','b');
 ```HTML
     <div id="box" class="box" title="我是div" a='11'  b="200" >属性操作</div>
     <button id="btn">属性操作</button>
-    
+  
     <script>
     let btnEle = document.getElementById("btn")
     let boxEle = document.getElementById("box")
@@ -1352,7 +1299,7 @@ dom对象.classList.replace('a','b');
         var btn = document.getElementById('login')
         //让按钮可用
         btn.disabled = false
-        
+      
         //让按钮不可用
         // btn.disabled = true
     </script>
@@ -1361,19 +1308,18 @@ dom对象.classList.replace('a','b');
 
 控制复选框/单选框是否选中：
 
-```Plain Text
+```Plain
 input.checked = true; // true选中 ， false不选中
 ```
 
 课堂案例：
 
 - 反选、全选、全不选
-
 - 优酷网站 密码框隐藏显示
 
 ## 元素的dataset属性
 
-利用dataset属性可以访问元素以`data-***`打头的属性:
+利用dataset属性可以访问元素以 `data-***`打头的属性:
 
 ```HTML
 <div id="box" data-name="kobe" data-age="18">篮球明星</div>
@@ -1388,7 +1334,7 @@ input.checked = true; // true选中 ， false不选中
 
 创建节点和追加节点操作:
 
-```Plain Text
+```Plain
 var node =  document.createElement("li"); // 创建节点对象
 父节点.appendChild(子节点); // 将子节点到追加（移动）父节点内部后面
 ```
@@ -1441,12 +1387,11 @@ var node =  document.createElement("li"); // 创建节点对象
 注意：创建节点用createElement方式，还是字符串拼接方式？
 
 - 主要看创建的节点的数量是否较多！ 多的话建议用字符串拼接方式。性能更好
-
 - 创建节点少的话两者都行
 
 插入到某个节点之前：
 
-```Plain Text
+```Plain
 父节点.insertBefore(新节点，null); // 把新节点插入到父节点内部最后面 等价于 appendChild
 父节点.insertBefore(新节点，旧节点); // 把新节点插入到旧节点的前面
 ```
@@ -1478,9 +1423,7 @@ var node =  document.createElement("li"); // 创建节点对象
 ## 节点删除和克隆（复制）
 
 - 删除节点：父节点.removeChild(子节点)
-
 - 浅克隆：node.cloneNode() ：只克隆node标签本身(即外壳)，返回克隆后新节点对象
-
 - 深克隆：node.cloneNode(true) ：克隆node标签及内部所有节点（深层），返回克隆后新节点对象
 
 删除示例：
@@ -1540,22 +1483,15 @@ var node =  document.createElement("li"); // 创建节点对象
 ## 节点查找的相关属性
 
 - 父节点.firstElementChild; // 获取父节点的第一个子元素节点
-
 - 父节点.lastElementChild; // 获取父节点的最后一个子元素节点
-
 - 父节点.children; // 获取父节点下的所有的子元素节点
-
 - 节点.nextElementSibling ; //找当前节点对象的下一个兄弟元素节点
-
 - 节点.previousElementSibling ; //找当前节点对象的上一个兄弟元素节点
-
 - 子节点.parentElement/parentNode; // 获取子节点的父元素节点
-
 - 获取父节点：
 
-    - node.parentNode: 获取的是父节点
-
-    - node.parentElement：获取的是父元素节点
+  - node.parentNode: 获取的是父节点
+  - node.parentElement：获取的是父元素节点
 
 ```HTML
 <body>
@@ -1575,16 +1511,16 @@ var node =  document.createElement("li"); // 创建节点对象
 
 ## 创建option节点
 
-除了使用`document.createElement()`的方法创建option标签，还可以使用以下特有的方式来创建。
+除了使用 `document.createElement()`的方法创建option标签，还可以使用以下特有的方式来创建。
 
-```Plain Text
+```Plain
 var op = new Option('体育',5);
 // 相当于创建标签: <option value='5'>体育</option>
 ```
 
-创建好的option节点后，除了可以使用`appendChild`方法追加,还可以使用以下方法来实现。
+创建好的option节点后，除了可以使用 `appendChild`方法追加,还可以使用以下方法来实现。
 
-```Plain Text
+```Plain
 var select = docuement.getElementById('select');
 var op = new Option('体育',5);
 select.options.add(op);
@@ -1613,14 +1549,14 @@ select.options.add(op);
             // op.innerText = '台湾省';
             // select.appendChild(op)
         }
-    
+  
     </script>
 </body>
 ```
 
 ## Image()创建图像
 
-`Image()`函数将会创建一个新`的HTMLImageElement`实例。
+`Image()`函数将会创建一个新 `的HTMLImageElement`实例。
 
 它的功能等价于 `document.createElement('img')`
 
@@ -1658,4 +1594,3 @@ myImage.onerror = function(){
 ```
 
 # 轮播图案例
-

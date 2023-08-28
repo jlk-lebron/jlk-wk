@@ -1,11 +1,11 @@
 ---
 title: css预处理器
-date: 2023-08-19 16:55:45
+date: 2023-06-19 16:55:45
 permalink: /pages/bd281e/
 categories:
   - 工程化
 tags:
-  - 
+  -
 ---
 # css预处理器-less
 
@@ -20,7 +20,7 @@ tags:
 .nav .abc  .item  .d a {}
 .nav .list  .item .def a {}
 .nav .list  .item a:hover {
-    
+  
 }
 ```
 
@@ -48,42 +48,34 @@ tags:
 常见的css预处理器：
 
 - [Sass](https://sass-lang.com/)
-
 - [LESS](https://lesscss.org/)
-
 - [Stylus](https://stylus-lang.com/)
 
 这里以讲解less为例。
 
 - less中文文档：[https://less.bootcss.com/](https://less.bootcss.com/)
-
 - 官网： [https://lesscss.org/](https://lesscss.org/)
 
 Less 到底为 CSS 添加了什么功能？
 
 - 变量声明
-
 - 嵌套规则
-
 - 混合(mixin)
-
 - 父元素选择器&
-
 - 导入样式
-
 - ...
 
 # 安装 Easy LESS 编译器扩展
 
-浏览器默认不识别`.less`的文件，所以需要借助编译器将less转为原生的css。
+浏览器默认不识别 `.less`的文件，所以需要借助编译器将less转为原生的css。
 
 这里推荐大家在vscode中安装Easy LESS编译器。
 
-安装好后，可以将`.less`变成为`.css`文件
+安装好后，可以将 `.less`变成为 `.css`文件
 
 测试：
 
-1. 项目中创建`index.less`文件,内容如下：
+1. 项目中创建 `index.less`文件,内容如下：
 
 ```LESS
 @width: 100px;
@@ -97,7 +89,6 @@ Less 到底为 CSS 添加了什么功能？
 ```
 
 1. 保存后，会在当前目录自动生成与less同名的index.css的文件。
-
 2. 在html静态文件中，导入index.css文件
 
 ## 配置less编译选项
@@ -123,7 +114,7 @@ Less 到底为 CSS 添加了什么功能？
 
 注意配置文件的**优先级**：
 
-```Plain Text
+```Plain
 vscode用户默认配置（settings.json） > 插件默认配置
 ```
 
@@ -135,7 +126,7 @@ vscode用户默认配置（settings.json） > 插件默认配置
 
 通过变量声明的方式，减少了原来在 CSS 中无法避免的硬编码重复。硬编码相当于代码写死了不够灵活。
 
-示例： 创建`index.less`文件,内容如下：
+示例： 创建 `index.less`文件,内容如下：
 
 ```LESS
 @width: 10px;
@@ -196,10 +187,10 @@ Less 提供了使用嵌套代替传统的层叠能力。
 ```LESS
 #box {   
   color: red;   
-  .header {     
+  .header {   
     font-size: 12px;   
   }   
-  .footer {     
+  .footer {   
     width: 300px;   
       ul {
           li {
@@ -264,7 +255,7 @@ a:hover {
 
 这样可提高样式的复用性和可维护性。
 
-创建`common.less`文件,定义了一些公共样式,内容如下：
+创建 `common.less`文件,定义了一些公共样式,内容如下：
 
 ```LESS
 // common.less
@@ -295,7 +286,7 @@ a:hover {
 
 ```
 
-导入上面的文件，采用`@import`语法进行导入。
+导入上面的文件，采用 `@import`语法进行导入。
 
 ```LESS
 // index.less
@@ -316,4 +307,3 @@ a:hover {
     中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国中国
 </div>
 ```
-

@@ -132,6 +132,32 @@ module.exports = {
         ],
       },
       {
+        title: "React",
+        link: "/",
+        collapsable: true, // 不折叠
+        children: [
+          { title: "高阶组件和renderprops", path: "/React/基础/高阶组件和renderprops.md" },
+          { title: "react基本使用", path: "/React/基础/react基本使用.md" },
+          { title: "HOOKS", path: "/React/基础/HOOKS.md" },
+          { title: "create-react-app", path: "/React/基础/create-react-app.md" },
+          { title: "虚拟dom和diff算法", path: "/React/基础/虚拟dom和diff算法.md" },
+          { title: "性能优化", path: "/React/基础/性能优化.md" },
+          { title: "其他", path: "/React/基础/其他.md" },
+          { title: "react-router-dom", path: "/React/react-router-dom.md" },
+        ],
+      },
+      {
+        title: "Redux",
+        link: "/",
+        collapsable: true, // 不折叠
+        children: [
+          { title: "Redux介绍", path: "/Redux/Redux介绍.md" },
+          { title: "React-Redux", path: "/Redux/React-Redux.md" },
+          { title: "Redux旧版语法", path: "/Redux/Redux旧版语法.md" },
+          { title: "Redux旧版语法", path: "/Redux/Redux旧版语法.md" },
+        ],
+      },
+      {
         title: "小程序",
         link: "/",
         collapsable: true, // 不折叠

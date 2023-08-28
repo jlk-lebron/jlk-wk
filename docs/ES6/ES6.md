@@ -1,18 +1,17 @@
 ---
 title: ES6
-date: 2023-08-20 16:55:45
+date: 2023-07-9 16:55:45
 permalink: /pages/1876a3/
 categories:
   - ES6
 tags:
-  - 
+  -
 ---
 # JS严格模式
 
 介绍：
 
 1. 严格模式通过**抛出错误**来消除了一些原有**静默错误**。
-
 2. 严格模式修复了一些导致 JavaScript 引擎难以执行优化的缺陷：有时候，相同的代码，严格模式可以比非严格模式下**运行得更快**
 
 开启严格模式：
@@ -38,11 +37,8 @@ function foo(){
 在严格模式下的，常见的变化有：
 
 - 声明变量不加关键字var或let，抛出异常
-
 - 全局中函数this不再是window，而是指向undefined
-
 - 不能通过detete删除普通变量。注：但删除对象属性是可以的
-
 - ....
 
 示例
@@ -85,24 +81,24 @@ ECMA ( European Computer Manufacturers Association ) 中文名为欧洲计算机
 什么是 ECMA-262
 
 - Ecma国际制定了许多标准, 而 ECMA-262 只是其中的一个, 所有标准列表查看
-[http://www.ecma-international.org/publications/standards/Standard.htm](http://www.ecma-international.org/publications/standards/Standard.htm)
+  [http://www.ecma-international.org/publications/standards/Standard.htm](http://www.ecma-international.org/publications/standards/Standard.htm)
 
 在线版ECMA文档：[https://tc39.es/ecma262/#sec-json.parse。建议看MND](https://tc39.es/ecma262/#sec-json.parse。建议看MND)
 
 ## ECMAScript发展历史
 
-|第 1 版|1997 年|制定了语言的基本语法|
-|-|-|-|
-|第 2 版|1998 年|较小改动|
-|第 3 版|1999 年|引入正则、异常处理、格式化输出等。IE开始支持|
-|第 4 版|1999 年|过于激进，未发布|
-|第 5 版|2009 年|引入严格模式、JSON、扩展对象，数组、原型、字符串、日期方法|
-|第 6 版(ES6)|2015 年|模块化、面向对象语法、Promise、箭头函数、let、const、数组解构赋值等等|
-|第 7 版|2016 年|幂运算符、数组includes扩展|
-|第 8 版|2017 年|字符串扩展、Async/await关键字|
-|第 9 版|2018 年|对象解构赋值、正则扩展|
-|第 10 版|2019 年|扩展对象、数组、字符串方法|
-|ES.next||动态指向下一个版本|
+| 第 1 版      | 1997 年 | 制定了语言的基本语法                                                  |
+| ------------ | ------- | --------------------------------------------------------------------- |
+| 第 2 版      | 1998 年 | 较小改动                                                              |
+| 第 3 版      | 1999 年 | 引入正则、异常处理、格式化输出等。IE开始支持                          |
+| 第 4 版      | 1999 年 | 过于激进，未发布                                                      |
+| 第 5 版      | 2009 年 | 引入严格模式、JSON、扩展对象，数组、原型、字符串、日期方法            |
+| 第 6 版(ES6) | 2015 年 | 模块化、面向对象语法、Promise、箭头函数、let、const、数组解构赋值等等 |
+| 第 7 版      | 2016 年 | 幂运算符、数组includes扩展                                            |
+| 第 8 版      | 2017 年 | 字符串扩展、Async/await关键字                                         |
+| 第 9 版      | 2018 年 | 对象解构赋值、正则扩展                                                |
+| 第 10 版     | 2019 年 | 扩展对象、数组、字符串方法                                            |
+| ES.next      |         | 动态指向下一个版本                                                    |
 
 注：从ES6开始，每年发布一个版本，版本号比年份最后一位大1。
 
@@ -117,11 +113,8 @@ ECMA ( European Computer Manufacturers Association ) 中文名为欧洲计算机
 一个提案在成为标准之前会经历下面的步骤：
 
 - 草案（ Sketch ）（非正式地：“普通人提案”）：提案特性的第一个描述。
-
 - 提案（ Proposal ）：如果 TC39 认为某个特性是重要的，那么此特性就上升为官方提案状态。这并不会保证最终会成为标准，但是大大地增加了成为标准的可能性。 ES6 提案的截止日期是2011年5月，在这之后不会考虑重大的新提案。
-
 - 实现（ Implementations ）：提案特性必须被实现，在理想情况下，要支持两种 JavaScript 引擎。在提案获得提升的时候，来自于社区的实现和反馈决定了提案的样子。
-
 - 标准（ Standard ）：如果提案持续检验自身，并且被 TC39 接受，那么该提案将最终包含进 ECMAScript 标准的一个版本中。此时，就成了一个标准特性。
 
 TC39会议内容： [https://github.com/tc39/notes/tree/211aa3f9e0fac861bba427776a9ecb8663fdf280/meetings](https://github.com/tc39/notes/tree/211aa3f9e0fac861bba427776a9ecb8663fdf280/meetings)
@@ -137,29 +130,17 @@ TC39会议内容： [https://github.com/tc39/notes/tree/211aa3f9e0fac861bba42777
 ## 常见的ES6新特性
 
 - let、const
-
 - 模板字符串
-
 - 对象简写
-
 - 解构赋值
-
 - 剩余参数&扩展运算符
-
 - 箭头函数
-
 - class声明类 、extends来实现继承
-
 - 数组、字符串、正则扩展方法
-
 - Object扩展方法
-
 - Symbol基本数据数据，表示独一无二的唯一值
-
 - promise
-
 - async/await
-
 - ....
 
 # symbol基本数据类型
@@ -167,7 +148,7 @@ TC39会议内容： [https://github.com/tc39/notes/tree/211aa3f9e0fac861bba42777
 基本数据类型：string、number、boolean、null、undefined、Symbol
 
 **什么是Symbol?**
-`Symbol`是`es6`中新引进的一种基本数据类型，表示独一无二的值。
+`Symbol`是 `es6`中新引进的一种基本数据类型，表示独一无二的值。
 
 每个从 Symbol() 返回的 symbol 值都是唯一的。
 
@@ -215,10 +196,8 @@ console.log(users[key2])
 Symbol特点：
 
 - Symbol值不能与其他数据进行运算。
-
 - Symbol函数不能使用new，因为其不是一个构造器
-
-- Symbol创建的属性名无法被枚举出来。即无法通过`Object.getOwnPropertyNames()、Object.keys()、for...in`遍历出来。但可以通过`Object.getOwnPropertySymbols()`进行遍历，会返回所有Symbol属性的数组
+- Symbol创建的属性名无法被枚举出来。即无法通过 `Object.getOwnPropertyNames()、Object.keys()、for...in`遍历出来。但可以通过 `Object.getOwnPropertySymbols()`进行遍历，会返回所有Symbol属性的数组
 
 ```JavaScript
 var obj = {
@@ -243,13 +222,11 @@ console.log(Object.getOwnPropertySymbols(obj)) // [ Symbol(c), Symbol(d) ]
 ## let特点
 
 - 声明的变量属于块级作用域（block scope）
-
 - 没有变量提升（存在TDZ），Temporal Dead Zone (暂时性死区)
 
 > 暂时性死区TDZ(Temporal Dead Zone): 起始于函数的开头，终止与相关变量声明的一行。在这个范围内无法访问let或const声明的变量。这块死区就是TDZ。
 
 - 不能声明相同变量
-
 - 声明的全局变量和和函数不会成为全局对象window的属性
 
 ![image.png](https://cdn.nlark.com/yuque/0/2022/png/26361372/1666242162387-18961df2-a292-46e3-8602-1b0b0568db84.png#averageHue=%23fdf4f4&clientId=u73fa2059-2017-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=284&id=u7edbf1da&margin=%5Bobject%20Object%5D&name=image.png&originHeight=284&originWidth=737&originalType=binary&ratio=1&rotation=0&showTitle=false&size=61787&status=done&style=none&taskId=u97f56fe5-a62f-458a-a508-70d610ed639&title=&width=737)
@@ -259,7 +236,6 @@ console.log(Object.getOwnPropertySymbols(obj)) // [ Symbol(c), Symbol(d) ]
 ## const特点
 
 - 声明的量属于常量，也是属于块级作用域，必须要赋予初始值，且后续不能修改。
-
 - 常量的名字一般都是约定大写
 
 代码实例：
@@ -290,7 +266,6 @@ if(true){
 let和const使用场景：
 
 - 对于需要写保护（防止被覆盖）的变量使用const
-
 - 只有确定要改变变量的值的时候才用let
 
 > 因为变量的值会不停的变化这也是导致很多bug的源头。
@@ -301,7 +276,7 @@ let和const使用场景：
 
 用一对反引号包起来的部分就是模板字符串。
 
-```Plain Text
+```Plain
 `${表达式}`
 ```
 
@@ -469,9 +444,7 @@ console.log(a,b)
 作用：
 
 - 获取函数所有的实参或部分实参，可以替换arguments
-
 - 合并对象或数组
-
 - 获取数组剩余元素
 
 ```JavaScript
@@ -568,9 +541,7 @@ obj.getName()
 ## 箭头函数和普通函数的区别
 
 - 而箭头函数中是没有this,会把this当做一个普通的变量，会去其所在的父级上下文中寻找
-
-- 箭头函数中没有arguments(伪数组)。 用剩余参数`...args`可以替代。 args是一个真数组。
-
+- 箭头函数中没有arguments(伪数组)。 用剩余参数 `...args`可以替代。 args是一个真数组。
 - 箭头函数不能new 操作。因为没有构造器 constructor
 
 ```JavaScript
@@ -608,7 +579,6 @@ obj.getName()
 注意：
 
 - 如果不关心函数内部的this指向，可以使用箭头函数。
-
 - 要考虑this指向，则还是用普通函数
 
 # 可选链运算符
@@ -716,10 +686,10 @@ dog.drink()
 # 静态属性和静态方法
 
 - 成员（实例）属性：对象自身空间中有的属性，我们称之为实例属性。
-
 - 静态属性/方法：由类名的设置的属性和方法。作用：一般用来实现一些辅助功能。
 
-    > 静态属性/方法不属于对象的，所以不能通过对象操作。仅能由类名（构造函数名）操作
+  > 静态属性/方法不属于对象的，所以不能通过对象操作。仅能由类名（构造函数名）操作
+  >
 
 ## es6中的静态属性和静态方法
 
@@ -758,7 +728,6 @@ console.log(Person.isArray([])) // true
 ```
 
 - 像数组的Array.isArray和Array.from也是属于静态方法。
-
 - 如数组的push、pop等都是属于实例方法，即只能通过数组对象才可以调用
 
 ## es5中的静态属性和静态方法
@@ -809,7 +778,6 @@ obj.name = '456' // 触发setter
 ## Object.keys()和Object.values()
 
 - Object.keys(): 返回对象的所有的key到一个数组中。但不含symbol的key
-
 - Object.values()：返回对象的所有value到一个数组中
 
 ```JavaScript
@@ -943,10 +911,10 @@ Object.defineProperty(person,'age',{
 
 注意，上面对属性设置的描述可以分为两大类：
 
-||configurable|enumerable|value|writable|get|set|
-|-|-|-|-|-|-|-|
-|数据描述符|可以|可以|可以|可以|不可以|不可以|
-|存取描述符|可以|可以|不可以|不可以|可以|可以|
+|            | configurable | enumerable | value  | writable | get    | set    |
+| ---------- | ------------ | ---------- | ------ | -------- | ------ | ------ |
+| 数据描述符 | 可以         | 可以       | 可以   | 可以     | 不可以 | 不可以 |
+| 存取描述符 | 可以         | 可以       | 不可以 | 不可以   | 可以   | 可以   |
 
 > 通过defineProperty设置symbol属性同样也是无法被枚举的，只能通过Object.getOwnPropertySymbols去获取
 
@@ -959,17 +927,11 @@ Object.defineProperty(person,'age',{
 原生具备iterator接口的数据(即都可用for of遍历)
 
 - Array
-
 - Arguments
-
 - Set
-
 - Map
-
 - String
-
 - NodeList
-
 - ....
 
 以字符串、数组作为示例：
@@ -1004,7 +966,7 @@ console.log(iterator.next()) // {value: undefined, done: true}
 
 **迭代器工作原理：**
 
-```Plain Text
+```Plain
   1.  创建一个指针对象，指向当前数据结构的起始位置
   2.  第一次调用对象的next方法，指针自动指向数据结构的第一个成员
   3.  接下来不断调用next方法，指针一直往后移动，直到指向最后一个成员
@@ -1017,27 +979,26 @@ console.log(iterator.next()) // {value: undefined, done: true}
 
 - 可迭代协议： Symbol.iterator  其值是一个函数
 
-    ```Plain Text
-    - 必许有这个协议属性。 如 变量名[Symbol.iterator]
-    ```
-
+  ```Plain
+  - 必许有这个协议属性。 如 变量名[Symbol.iterator]
+  ```
 - 迭代器协议：
 
-    ```Plain Text
-    - 必须返回一个对象
-    - 返回的对象要有next方法
-    - next方法也要返回一个对象，并且有value 和 done两个属性
-    
-    形如：
-    return {
-        next(){
-            return {
-                value:xxx,	// value当前迭代的值
-                done:boolean // true 遍历完毕， false 没有遍历完毕，可继续遍历
-            }
-        }
-    }
-    ```
+  ```Plain
+  - 必须返回一个对象
+  - 返回的对象要有next方法
+  - next方法也要返回一个对象，并且有value 和 done两个属性
+
+  形如：
+  return {
+      next(){
+          return {
+              value:xxx,	// value当前迭代的值
+              done:boolean // true 遍历完毕， false 没有遍历完毕，可继续遍历
+          }
+      }
+  }
+  ```
 
 ## 自定义遍历数据
 
@@ -1078,7 +1039,7 @@ console.log(iterator.next()) // {value: undefined, done: true}
 
 # 汇总常用的循环技巧
 
-```Plain Text
+```Plain
     <script>
       // 1. for/while/do-while循环： 作用：循环数组、字符串
       // 2. for-in: 循环对象可枚举的属性，不包含Symbol。
@@ -1090,7 +1051,6 @@ console.log(iterator.next()) // {value: undefined, done: true}
 # 数组的find和findIndex
 
 - find: 返回数组中第一个满足指定条件的元素
-
 - findIndex： 返回数组中第一个满足指定条件的元素下标
 
 ```JavaScript
@@ -1134,7 +1094,7 @@ console.log(iterator.next()) // {value: undefined, done: true}
 
 # 伪数组和真数组
 
-- 伪数组（likeArray）：和真数组差不多，可以通过下标索引取值，也有`length`属性，但不能调用真数组的方法如push。如 arguments，getElementsByTagName,querySelectorAll等返回都是伪数组。
+- 伪数组（likeArray）：和真数组差不多，可以通过下标索引取值，也有 `length`属性，但不能调用真数组的方法如push。如 arguments，getElementsByTagName,querySelectorAll等返回都是伪数组。
 
 ```JavaScript
 const obj = {
@@ -1232,7 +1192,7 @@ for(let item of s){
 
 将集合set转为数组：
 
-```Plain Text
+```Plain
 Array.from(set) // 或 [...set集合]
 ```
 
@@ -1247,9 +1207,7 @@ console.log(newArr)
 ## Set 和 数组区别
 
 - Api不同
-
 - Set元素不能重复
-
 - Set是无序结构，操作很快。数组有序，操作慢
 
 ```JavaScript
@@ -1289,15 +1247,10 @@ Map也实现了iterator接口，所以可以使用『扩展运算符』和『for
 Map的属性和方法
 
 - size    返回Map的元素个数
-
 - set     增加一个新元素，返回当前Map
-
 - get     返回键名对象的键值
-
 - has     检测Map中是否包含某个元素，返回boolean值
-
 - delete 函数对应key
-
 - clear   清空集合，返回undefined
 
 ```JavaScript
@@ -1335,9 +1288,7 @@ for (var [k, v] of map1) {
 ## Map 和 Object区别
 
 - Map可以以任意类型数据作为key，而Object只能是string类型的key
-
 - Map可以迭代（for-of），object不可以
-
 - map是有序的，Object不能保证顺序
 
 参考map和Object区别：[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map)
@@ -1374,17 +1325,11 @@ for (var item of obj) {
 # 扩展的字符串函数
 
 - padStart:开头填充字符串
-
 - padEnd:末尾填充字符串
-
 - startsWith:判断一个字符串是否以特定字符串开头，满足返回true,否则返回false
-
 - endsWith:判断一个字符串是否以特定字符串结尾，满足返回true,否则返回false
-
 - trim: 去除两边连续的空格
-
 - trimStart: 去除开头连续的空格
-
 - trimEnd: 去除结尾连续的空格
 
 示例代码：
@@ -1412,16 +1357,12 @@ console.log( '  abc  '.trimEnd() ); // '  abc'
 
 - **Math.pow(n,m)**: 返回以n为底的m次方。
 
-    > 或 n**m
-
+  > 或 n**m
+  >
 - **Number.parseInt()**：返回转换值的整数部分
-
 - **Number.parseFloat()**：返回转换值的浮点数部分
-
 - **Number.isNaN()**：是否为NaN
-
 - **Number.isInteger()**：是否为整数
-
 - **Math.trunc()**：返回数值整数部分
 
 ```JavaScript
@@ -1456,25 +1397,17 @@ console.log(Number('123.45')) // 123.45
 上面方法特点：
 
 1. 都是不可变方法
-
 2. 除了forEach函数没有返回值，其他函数都有返回值。
 
 每个函数的作用：
 
 - forEach: 对数组中每个元素进行遍历，此方法没有返回值
-
 - map: 对数组中每个元素进行加工处理，返回一个加工后的新数组
-
 - filter:   对数组中的元素进行筛选，返回一个筛选后的新数组
-
 - find: 返回数组中第一个满足指定条件的元素
-
 - findIndex： 返回数组中第一个满足指定条件的元素下标
-
-- every: 若数组中每个元素是否都满足指定的条件，才返回true,否则返回false 
-
+- every: 若数组中每个元素是否都满足指定的条件，才返回true,否则返回false
 - some: 若数组中只要有一个元素是否满足指定的条件，才返回true,否则返回false
-
 - reduce: 连续操作器
 
 ```JavaScript
@@ -1580,18 +1513,15 @@ console.log(result) // [4, 5]
 
 - 语法
 
-```Plain Text
+```Plain
 arr.reduce(callback(accumulator, currentValue,[index],[array]), [initialValue])
 ```
 
 callback四个参数：
 
 - `accumulator 累计器`
-
 - `currentValue 当前值`
-
 - `currentIndex 可选，当前索引`
-
 - `array 可选，源数组`
 
 ---
@@ -1601,9 +1531,7 @@ callback四个参数：
 reduce连续操作器特点：
 
 - 若传了初始化值initval,则从数组下标0 开始循环
-
 - 若没传初始化值initval,则将数组下标为0的值作为初始值，从下标1开始循环
-
 - callback函数返回的累计器的值会作为下一次循环累计器的值，reduce函数最终会得到最后一次累计器的值
 
 ```JavaScript
@@ -1661,7 +1589,8 @@ arr4.flat(Infinity);
 
 - matchAll: 返回正则匹配的所有结果及捕获组的迭代器。
 
-    > matchAll要求正则必须有标识符g
+  > matchAll要求正则必须有标识符g
+  >
 
 ```JavaScript
 var str = 'gfdg13411112222fdgdg18944445555'
@@ -1683,9 +1612,9 @@ console.log([...str.matchAll(reg)])
 
 就是给捕获组内容起个别名，方便引用
 
-语法：在小括号前面添加`?<标识符>`
+语法：在小括号前面添加 `?<标识符>`
 
-```Plain Text
+```Plain
 (?<标识符>)
 ```
 
@@ -1703,13 +1632,12 @@ console.log([...str.matchAll(reg)])
 
 - 为什么要使用捕获组（分组）
 
-    - 为了当做整体去匹配  /(1\d){5}/,即把`1\d`当做一个整体去匹配
-
-    - 为了反向引用
+  - 为了当做整体去匹配  /(1\d){5}/,即把 `1\d`当做一个整体去匹配
+  - 为了反向引用
 
 如果仅仅只是为了当做一个整体去匹配，并不需要反向引用，我们可以采用非捕获组进行优化。意味后续也就不可以反向引用了。
 
-```Plain Text
+```Plain
 (?:)
 ```
 
@@ -1768,7 +1696,6 @@ console.log(obj2);
 解决办法：
 
 - 通过创建一个map容器，作为缓存使用，每次递归时，将新对象存入进去。
-
 - 再次进入递归时判断缓存中是否已经存在的对象，存在则返回，这样避免进入死递归。
 
 ```JavaScript
@@ -1783,7 +1710,7 @@ console.log(obj2);
             var data = Array.isArray(target) ? [] : {}
             // 将拷贝的对象作为key,data作为value存入缓存中，便于后续的判断
             cacheMap.set(target, data)
-            
+        
             if (Array.isArray(target)) {
                 // 数组
                 for (var i = 0; i < target.length; i++) {
@@ -1795,7 +1722,7 @@ console.log(obj2);
                     data[k] = cloneDeep(target[k], cacheMap) // 递归调用
                 }
             }
-            
+        
             return data
         }
 
@@ -1819,7 +1746,7 @@ console.log(obj2);
 
 ## 扩展Vue源码缓存函数
 
-```Plain Text
+```Plain
 /**
        * 对一个具有单参数的函数的结果进行缓存
        * {参数值1：结果1，参数值2：结果1}
@@ -1852,10 +1779,6 @@ console.log(obj2);
 闭包应用场景：
 
 - 防抖
-
 - 节流
-
 - 一次性函数
-
 - 缓存函数
-

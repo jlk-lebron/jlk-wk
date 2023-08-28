@@ -1,11 +1,11 @@
 ---
 title: 05-ajax
-date: 2023-08-19 16:55:45
+date: 2023-06-19 16:55:45
 permalink: /pages/418db7/
 categories:
   - 工程化
 tags:
-  - 
+  -
 ---
 # 05-ajax
 
@@ -13,7 +13,7 @@ tags:
 
 > 浏览器内建对象，用于与服务器通信(交换数据) ， 由此我们便可实现对网页的部分更新，而不是刷新整个页面。这个请求是异步的，即在往服务器发送请求时，并不会阻碍程序的运行，浏览器会继续渲染后续的结构。
 
-```Plain Text
+```Plain
 请求由客户端发起，其规范格式为：请求行、请求头、请求主体。
 ```
 
@@ -32,9 +32,7 @@ XMLHttpRequest以异步的方式发送HTTP请求，因此在发送请求时，�
 注意点 :
 
 - get请求,设置请求行时,需要把参数列表拼接到url后面
-
 - get请求不用设置请求头, 不用说明请求主体的编码方式
-
 - get请求的请求体为null
 
 ## 发送post请求
@@ -46,16 +44,14 @@ var xhr = new XMLHttpRequest();// 1. 设置请求行 post请求的参数列表�
 注意点 :
 
 - post请求, 设置请求行时, 不拼接参数列表
-
 - post必须设置请求头中的content-type为application/x-www-form-urlencoded, 标记请求体解析方式
-
 - post 请求需要将参数列表设置到请求体中
 
 ## 获取响应 readyState
 
 readyState:记录了XMLHttpRequest对象的当前状态
 
-```Plain Text
+```Plain
 readyState有五种可能的值：
 xhr.readyState = 0时，UNSENT open尚未调用
 xhr.readyState = 1时，OPENED open已调用
@@ -82,9 +78,9 @@ HTTP响应分为3个部分，状态行、响应头、响应体。
 
 协议相同 域名相同 端口相同
 
-举例来说，这个网址`http://www.example.com/dir/page.html`协议是`http://`，
+举例来说，这个网址 `http://www.example.com/dir/page.html`协议是 `http://`，
 
-域名是`www.example.com`，端口是`80`（默认端口可以省略）。它的同源情况如下。
+域名是 `www.example.com`，端口是 `80`（默认端口可以省略）。它的同源情况如下。
 
 ```JavaScript
 http://www.example.com/dir2/other.html：同源file:///F:/phpStudy/WWW/day01/04-demo/04.html 不同源(协议不同)http://v2.www.example.com/dir/other.html：不同源（域名不同）http://www.example.com:81/dir/other.html：不同源（端口不同）//来源: http://127.0.0.1:5000/index.html// ajax地址: http://localhost:5000/test
@@ -114,7 +110,7 @@ http://www.example.com/dir2/other.html：同源file:///F:/phpStudy/WWW/day01/04-
 
 原理：服务端返回一个定义好的js函数的调用，并且将服务器的数据以该函数参数的形式传递过来，这个方法需要前后端配合
 
-`script` 标签是不受同源策略的限制的，它可以载入任意地方的 JavaScript 文件。类似的还有`img`和`link`标签
+`script` 标签是不受同源策略的限制的，它可以载入任意地方的 JavaScript 文件。类似的还有 `img`和 `link`标签
 
 ```HTML
 <!--不受同源策略限制的标签--><img src="http://www.api.com/1.jpg" alt=""><link rel="stylesheet" href="http://www.api.com/1.css"><script src="http://www.api.com/1.js"></script>
@@ -125,9 +121,7 @@ http://www.example.com/dir2/other.html：同源file:///F:/phpStudy/WWW/day01/04-
 ```
 
 1. 说白了，jsonp的原理就是 借助了script标签 src 请求资源时, 不受同源策略的限制.
-
 2. 在服务端返回一个函数的调用，将数据当前调用函数的实参。
-
 3. 在浏览器端，需要程序要声明一个全局函数，通过形参就可以获取到服务端返回的对应的值
 
 jsonp原理大家需要知道，面试中经常会问到，实际工作中不用纠结, 因为jquery已经帮我们封装好了，我们使用起来非常的方便。
@@ -141,7 +135,6 @@ jsonp原理大家需要知道，面试中经常会问到，实际工作中不用
 跨域资源共享（CORS）的前提
 
 - 浏览器支持这个功能( 兼容性IE10+ )
-
 - 服务器必须允许这种跨域。
 
 服务器允许跨域的代码：
@@ -153,25 +146,20 @@ jsonp原理大家需要知道，面试中经常会问到，实际工作中不用
 ### CORS的具体流程（了解）
 
 1. 浏览器在真正发送请求之前会先给服务器发送一个预请求,询问是否支持跨域
-
 2. 服务器端收到这个请求后，在响应头中添加Access-Control-Allow-Origin Header资源权限配置。发送响应
+3. 浏览器收到响应后，查看响应头中是否设置了 `Access-Control-Allow-Origin:请求源域名或者*;`
 
-3. 浏览器收到响应后，查看响应头中是否设置了`Access-Control-Allow-Origin:请求源域名或者*;`
-
-    如果有,则浏览器发起真正的请求,如果没有,则浏览器不发送真正的请求并抛出跨域的错误
+   如果有,则浏览器发起真正的请求,如果没有,则浏览器不发送真正的请求并抛出跨域的错误
 
 **注意:**
 
 1. **跨域行为是浏览器行为，响应是回来了, 只是浏览器安全机制做了限制, 对于跨域响应内容进行了忽略。**
-
 2. **服务器与服务器之间是不存在跨域的问题的**
 
 ### jsonp与cors的对比
 
 - jsonp兼容性好，老版本浏览器也支持，但是jsonp仅支持get请求，发送的数据量有限。使用麻烦
-
 - cors需要浏览器支持cors功能才行。但是使用简单，**只要服务端设置允许跨域，对于客户端来说，跟普通的get、post请求并没有什么区别。**
-
 - 跨域的安全性问题：**因为跨域是需要服务端配合控制的** ，也就是说不论jsonp还是cors，如果没有服务端的允许，浏览器是没法做到跨域的。
 
 # XMLHttpRequest2.0
@@ -244,7 +232,6 @@ xhr.upload.onprogress = function (e) {  inner.style.width = (e.loaded/e.total*10
 
 > 是js原生提供的基于promise和http协议的发请求的新方式
 
-```Plain Text
+```Plain
 const response = await fetch(url地址,{    method: 请求方式. 不写默认是get,    body: post请求请求主体的数据    headers:{ //设置请求头        'content-type': 'application/json'    }})// response 是fetch中封装的一个响应数据对象,还需要调用自身的json方法,才能拿到响应主体的数据const data = await response.json() data才是真正的数据
 ```
-
